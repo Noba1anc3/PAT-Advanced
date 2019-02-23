@@ -46,7 +46,6 @@ int main(){
 
 
 #include <stdio.h>
-
 int main()
 {
 	int M, N, i, found, count = 1, tmp;
@@ -59,16 +58,14 @@ int main()
 	    if( !count ){
 	    	found = tmp;
 	    	count = 1;
-		  }
-		  else{
-			  if(found == tmp)
-			    count++;
-			  else
-			    count--;
-	  	}
+	    }
+	    else{
+	        if(found == tmp)
+	            count++;
+		else
+		    count--;
+	    }
 	}
-	
 	printf("%d\n", found);
-	
 	return 0;   
 }
