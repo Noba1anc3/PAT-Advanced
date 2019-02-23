@@ -1,11 +1,16 @@
 
+#include "stdafx.h"
 #include <stdio.h>
 #include <stdlib.h>
+
+int cmp(const void *a, const void *b){
+	return *(int*)a - *(int*)b;
+}
 
 //1430 
 int main()
 {
-	int i, j, k, l, t[5], tmp, req_num, wnd_num, total_wait_time = 0, wnd_table[100], queue[10][5];
+	int i, j, k, t[5], req_num, wnd_num, total_wait_time = 0, wnd_table[100], queue[10000][5];
 	double real_req_num = 0;
 	
 	scanf("%d %d\n",&req_num,&wnd_num);
@@ -35,28 +40,13 @@ int main()
         }
     }
 
+
 	for(i = 0;i < wnd_num;i++)
 		wnd_table[i] = 28800;
 	
 	for( i = 0; i < req_num ; i++ ){
 
-	    for(j = 0;j < wnd_num; j++)
-		{            
-			for(k = 0;k < wnd_num - j - 1; k++)
-			{
-				if(wnd_table[k] > wnd_table[k+1])
-				{
-					for(l = 0;l < 5; l++)
-						tmp = wnd_table[k];
-
-					for(l = 0;l < 5; l++)
-						wnd_table[k] = wnd_table[k+1];
-
-					for(l = 0;l < 5; l++)
-						wnd_table[k+1]=tmp;
-		        }
-			}
-		}	
+		qsort(wnd_table, wnd_num, sizeof(wnd_table[0]), cmp);
 
 		if(queue[i][3] > 60)
 			queue[i][3] = 60;
