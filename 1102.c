@@ -41,7 +41,6 @@ int main()
 		nodes[n-1].lchild = tmpl - 48;
 
 	int head = GetTreeHead(n, nodes);
-
 	LevelOrderTraverse(head, nodes);
 	InOrderTraverse(head, nodes);
 
@@ -76,7 +75,7 @@ void InOrderTraverse(int head, BTNode nodes[]){
 	}
 	else
 		printf("%d\n", head);
-	
+
 	InOrderTraverse(nodes[head].rchild, nodes);
 }
 
@@ -92,7 +91,7 @@ void LevelOrderTraverse(int head, BTNode nodes[]){
 	queue[rear++] = head;
 
 	while(front != rear){
-		int prt = queue[front];
+		int prt = queue[front++];
 
 		if( count < n-1 ){
 			printf("%d ", prt);
@@ -101,14 +100,13 @@ void LevelOrderTraverse(int head, BTNode nodes[]){
 		else
 			printf("%d\n", prt);
 
-		if(nodes[queue[front]].lchild >= 0)
-			queue[rear++] = nodes[queue[front]].lchild;
+		if(nodes[prt].lchild >= 0)
+			queue[rear++] = nodes[prt].lchild;
 		
-		if(nodes[queue[front]].rchild >= 0)
-			queue[rear++] = nodes[queue[front]].rchild;
-		
-		front++;
+		if(nodes[prt].rchild >= 0)
+			queue[rear++] = nodes[prt].rchild;
 	}
+
 	count = 0;
 
 }
