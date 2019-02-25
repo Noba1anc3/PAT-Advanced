@@ -51,7 +51,7 @@ BinTree ReBuildTree(int *post, int i, int j, int *in, int m, int n)
     if (x == n) 
 		p->rchild = NULL;
     else
-        p->rchild = ReBuildTree(post, i+x-m, j-1, in, x+1,n);
+        p->rchild = ReBuildTree(post, i+x-m, j-1, in, x+1, n);
  
     return p;
 }
