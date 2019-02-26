@@ -10,7 +10,7 @@ bool cmp(int a, int b) {
 
 int main() {
     int n, i;    
-	  deque<int> a, b;
+    deque<int> a, b;
 
     scanf("%d", &n);
     for (i = 0; i < n; i++) {
