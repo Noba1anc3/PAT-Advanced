@@ -50,7 +50,7 @@ void postorder1(BiTree T){
 	return;
     postorder1(T->left);
     postorder1(T->right);
-	post1.push_back(T->data);
+    post1.push_back(T->data);
 }
 
 void postorder2(BiTree T){
@@ -58,7 +58,7 @@ void postorder2(BiTree T){
 	return;
     postorder2(T->right);
     postorder2(T->left);
-	post2.push_back(T->data);
+    post2.push_back(T->data);
 }
 
 int main(){
