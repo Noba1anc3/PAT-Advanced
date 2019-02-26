@@ -1,4 +1,3 @@
-
 #include <cstdio>
 #include <vector>
 #include <iostream>
@@ -32,7 +31,7 @@ void insert(BiTree &T, int data){
 
 void preorder1(BiTree T){
     if(T == NULL) 
-		return;
+	return;
     pre1.push_back(T->data);
     preorder1(T->left);
     preorder1(T->right);
@@ -40,7 +39,7 @@ void preorder1(BiTree T){
 
 void preorder2(BiTree T){
     if(T == NULL) 
-		return;
+	return;
     pre2.push_back(T->data);
     preorder2(T->right);
     preorder2(T->left);
@@ -48,7 +47,7 @@ void preorder2(BiTree T){
 
 void postorder1(BiTree T){
     if(T == NULL) 
-		return;
+	return;
     postorder1(T->left);
     postorder1(T->right);
 	post1.push_back(T->data);
@@ -56,14 +55,13 @@ void postorder1(BiTree T){
 
 void postorder2(BiTree T){
     if(T == NULL) 
-		return;
+	return;
     postorder2(T->right);
     postorder2(T->left);
 	post2.push_back(T->data);
 }
 
 int main(){
-
     int n;
     cin>>n;
     BiTree T = NULL;
