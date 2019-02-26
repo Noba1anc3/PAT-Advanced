@@ -15,9 +15,9 @@ int main(){
 	vector<char> input;
 	vector<char>::iterator itc;
   
-  for(;i<21;i++)
-    doub[i] = 'a';
-  i = 0;
+ 	for(;i<21;i++)
+    		doub[i] = 'a';
+  	i = 0;
   
 	while((c = getchar()) != '\n')
 		input.push_back(c);
