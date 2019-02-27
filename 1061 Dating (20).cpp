@@ -40,7 +40,7 @@ int main(){
 		}                                      
 	}
 
-   	for(i = 0; strc[i] != '\0' && strd[i] != '\0'; j++){ 
+   	for(i = 0; strc[i] != '\0' && strd[i] != '\0'; i++){ 
 		if(strc[i] == strd[i] && isalpha(strc[i]))  
 			break;                                   
    	}
