@@ -5,11 +5,8 @@
 using namespace std;
 
 int main(){
-
-   	int i,j;
-
+   	int i;
 	string stra,strb,strc,strd;
-
 	cin>>stra>>strb>>strc>>strd;
 
 	for(i = 0; stra[i] != '\0' && strb[i] != '\0'; i++){
@@ -34,7 +31,7 @@ int main(){
    	}
 
    	for(;stra[i] != '\0' && strb[i] != '\0'; i++){
-		if(stra[i] == strb[i] && (('0' <= stra[i] && stra[i] <= '9')||('A' <= stra[i] && stra[i] <= 'N'))){
+		if(stra[i] == strb[i] && ( isdigit(stra[i]) || ('A' <= stra[i] && stra[i] <= 'N') )){
 			if('0' <= stra[i] && stra[i] <= '9') 
 				cout<<"0"<<stra[i]<<":"; 
 			else  
@@ -43,15 +40,15 @@ int main(){
 		}                                      
 	}
 
-   	for(j = 0; strc[j] != '\0' && strd[j] != '\0'; j++){ 
-		if(strc[j] == strd[j] && isalpha(strc[j]))  
+   	for(i = 0; strc[i] != '\0' && strd[i] != '\0'; j++){ 
+		if(strc[i] == strd[i] && isalpha(strc[i]))  
 			break;                                   
    	}
 
-   	if(j < 10) 
-		cout<<"0"<<j<<endl;
+   	if(i < 10) 
+		cout<<"0"<<i<<endl;
    	else 
-		cout<<j<<endl;
+		cout<<i<<endl;
 
 	return 0;
 }
