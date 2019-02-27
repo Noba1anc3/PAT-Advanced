@@ -28,9 +28,9 @@ int main(){
         ans.erase(ans.begin());
 
     if(ans.size() == 0)
-		    cout<<'0';
+	cout<<'0';
     else 
-		    cout<<ans;
+	cout<<ans;
 
     return 0;
 }
