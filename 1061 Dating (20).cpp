@@ -1,7 +1,7 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <iostream>
 #include <string>
+#include <cstdio>
+#include <cstdlib>
+#include <iostream>
 using namespace std;
 
 int main(){
@@ -40,10 +40,9 @@ int main(){
 		}                                      
 	}
 
-   	for(i = 0; strc[i] != '\0' && strd[i] != '\0'; i++){ 
+   	for(i = 0; strc[i] != '\0' && strd[i] != '\0'; i++)
 		if(strc[i] == strd[i] && isalpha(strc[i]))  
 			break;                                   
-   	}
 
    	if(i < 10) 
 		cout<<"0"<<i<<endl;
