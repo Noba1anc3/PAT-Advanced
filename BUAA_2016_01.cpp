@@ -17,7 +17,7 @@ int main()
     n2=atoi(str1);
     if(n2%n1==0)
         printf("%d*%d=%s",n1,n2/n1,str1);
-	else
+    else
         printf("%d %s",n1,str1);
 
     return 0;
